@@ -16,20 +16,20 @@ class MyApp extends StatefulWidget{
     print("button pressed " );
   }
   Widget build(BuildContext context){
-    var question =[ {'question':"what/' is ur favorite color"} ,{'question':"what is ur favorite food "}];
+    var question =[ {'Question':"what/' is ur favorite color",'ans':["black","blue","red","white"]} ,{'Question':"what is ur favorite food " ,"ans":["apple" ,"banana","orange" ,"none" ] }];
   return MaterialApp(
     home: Scaffold( 
       appBar:AppBar( title: Text("my first quiz app"),
       ),
     body: Column(children: [
-      Question(question[index][question]),
-      
-     
-     
-     
-     button ('answer 1',action),
-     button ('answer 2',action),
-     button ('answer 3',action),
+      Question(question[index]["Question"]),
+      ...(question[index]["ans"] as List<String>).map((forEachElementOfAns){
+        return button(forEachElementOfAns,action);
+        
+      }).toList()
+    //  button ('answer 1',action),
+    //  button ('answer 2',action),
+    //  button ('answer 3',action),
      
       ],
       ),

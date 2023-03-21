@@ -6,5 +6,5 @@ class button extends StatelessWidget{
   Widget build(BuildContext contexst) {
     return ElevatedButton(child:Text(text) ,onPressed:function );
   }
-  //
+  // 
 }
