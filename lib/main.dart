@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './question.dart';
 import './button.dart';
+import './quiz.dart';
 class MyApp extends StatefulWidget{
   @override
   State<StatefulWidget> createState(){
@@ -23,18 +24,7 @@ class MyApp extends StatefulWidget{
     home: Scaffold( 
       appBar:AppBar( title: Text("my first quiz app"),
       ),
-    body: Column(children: [
-      Question(question[index]["Question"]),
-      ...(question[index]["ans"] as List<String>).map((forEachElementOfAns){
-        return button(forEachElementOfAns,action);
-        
-      }).toList()
-    //  button ('answer 1',action),
-    //  button ('answer 2',action),
-    //  button ('answer 3',action),
-     
-      ],
-      ),
+    body: quiz(action,question,index )
   ),
   );}
   else {
