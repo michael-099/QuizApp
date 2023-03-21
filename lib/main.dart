@@ -15,8 +15,10 @@ class MyApp extends StatefulWidget{
    
     print("button pressed " );
   }
+  
   Widget build(BuildContext context){
     var question =[ {'Question':"what/' is ur favorite color",'ans':["black","blue","red","white"]} ,{'Question':"what is ur favorite food " ,"ans":["apple" ,"banana","orange" ,"none" ] }];
+  if (index <question.length){
   return MaterialApp(
     home: Scaffold( 
       appBar:AppBar( title: Text("my first quiz app"),
@@ -34,7 +36,18 @@ class MyApp extends StatefulWidget{
       ],
       ),
   ),
-  );
+  );}
+  else {
+    return MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text("end"),
+    ),
+    body: Text('done'),
+  ),
+);
+
+  }
 }
 }
 void main(){
