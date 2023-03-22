@@ -9,8 +9,12 @@ class result extends StatelessWidget {
         appBar: AppBar(
           title: Text("Score"),
         ),
-        body: Center(child: Text('your score is $value ')),
-      ),
-    );
+        body:Center(child:(Column(children: [Text('your score is $value ') ,
+        TextButton(child:Text("retake"))] ,
+        ))))
+        
+        
+      );
+    
   }
 }
