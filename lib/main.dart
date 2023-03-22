@@ -14,25 +14,39 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   var index = 0;
-  void action() {
+  int totalScore = 0;
+  var question = [
+    {
+      'Question': "what/' is ur favorite color",
+      'ans': [
+        {"text": "black", "score": 0},
+        {"text": "blue", "score": 0},
+        {"text": "red", "score": 0},
+        {"text": "white", "score": 1}
+      ]
+    },
+    {
+      'Question': "what is ur favorite food ",
+      "ans": [
+        {"text": "apple", "score": 0},
+        {"text": "banana", "score": 1},
+        {"text": "orange", "score": 0},
+        {"text": "none", "score": 1}
+      ]
+    }
+  ];
+  void action(int score) {
+    totalScore = totalScore + score;
+    print("your score" );
+    print( totalScore);
     setState(() {
       index = index + 1;
     });
-
+    totalScore = totalScore + score;
     print("button pressed ");
   }
 
   Widget build(BuildContext context) {
-    var question = [
-      {
-        'Question': "what/' is ur favorite color",
-        'ans': ["black", "blue", "red", "white"]
-      },
-      {
-        'Question': "what is ur favorite food ",
-        "ans": ["apple", "banana", "orange", "none"]
-      }
-    ];
     if (index < question.length) {
       return MaterialApp(
         home: Scaffold(
