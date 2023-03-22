@@ -56,7 +56,7 @@ class MyAppState extends State<MyApp> {
             body: quiz(action, question, index)),
       );
     } else {
-      return result();
+      return result(totalScore);
     }
   }
 }
