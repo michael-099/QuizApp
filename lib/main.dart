@@ -37,13 +37,21 @@ class MyAppState extends State<MyApp> {
   ];
   void action(int score) {
     totalScore = totalScore + score;
-    print("your score" );
-    print( totalScore);
+    print("your score");
+    print(totalScore);
     setState(() {
       index = index + 1;
     });
     totalScore = totalScore + score;
     print("button pressed ");
+  }
+
+  resetApp() {
+    setState(() {
+      totalScore = 0;
+    index = 0;
+    });
+    
   }
 
   Widget build(BuildContext context) {
@@ -56,7 +64,7 @@ class MyAppState extends State<MyApp> {
             body: quiz(action, question, index)),
       );
     } else {
-      return result(totalScore);
+      return result(totalScore,resetApp);
     }
   }
 }
