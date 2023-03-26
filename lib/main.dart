@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
         {"text":"int" , "score": 0},
         {"text":"double", "score": 0},
         {"text": " long", "score": 2},
-        {"text":" String" , "score": 0},
+        {"text":" String" , "score": 0}, 
       ]
     },
     {

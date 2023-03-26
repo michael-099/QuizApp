@@ -19,16 +19,3 @@ quiz(  this.action,this.question,this.index);
             ],
           );
 }}
-
-
-
-
-
-
-
-
-
-
-
-
-
