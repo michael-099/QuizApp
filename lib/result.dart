@@ -12,6 +12,7 @@ class result extends StatelessWidget {
         ),
         body: Center(
           child: (Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('your score is $value '),
               TextButton(child: Text("retake") ,onPressed: retake)
