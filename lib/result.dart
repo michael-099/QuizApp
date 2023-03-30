@@ -3,7 +3,7 @@ import "package:flutter/material.dart";
 class result extends StatelessWidget {
   int value;
   Function retake;
-  result(this.value,this.retake);
+  result(this.value, this.retake);
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -15,7 +15,7 @@ class result extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('your score is $value '),
-              TextButton(child: Text("retake") ,onPressed: retake)
+              TextButton(child: Text("retake"), onPressed: retake)
             ],
           )),
         ),
